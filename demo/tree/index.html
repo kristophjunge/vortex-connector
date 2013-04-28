@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vortex Demo</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link href="../style.css" media="screen" rel="stylesheet" type="text/css">
+		<script src="../../src/vortex/vortex.js" type="text/javascript"></script>
+		<script src="../../src/vortex/browser.js" type="text/javascript"></script>
+		<script src="../../src/vortex/websocket.js" type="text/javascript"></script>
+		<script src="../../src/vortex/client.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<canvas id="vortex_canvas" width="650" height="450"></canvas>
+		<script type="text/javascript" src="./demo.js"></script>
+		<script>
+			
+			var vortexConnector=new vortex({
+				debug: true,
+				host: '127.0.0.1',
+				port: 8081,
+				listener: {
+					update: function(event) {
+						console.clear();
+						eval(event.body);
+					}
+				}
+			});
+			
+		</script>
+	</body>
+</html>

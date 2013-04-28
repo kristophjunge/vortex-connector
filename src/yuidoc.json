@@ -1,0 +1,8 @@
+{
+	"name": "Vortex Client Documentation",
+	"description": "Documentation of the Vortex Editor JavaScript library",
+	"version": "0.1.0",
+	"options": {
+		"outdir": "./doc"
+	}
+}
